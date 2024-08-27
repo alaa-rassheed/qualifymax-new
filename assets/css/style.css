@@ -1991,7 +1991,7 @@ input[type=color] {
 }
 /*--- preloader ---*/
 .dark #preloader {
-  background-color: var(--tp-theme-1);
+  background-color: var(--main-color);
 }
 
 #preloader {
