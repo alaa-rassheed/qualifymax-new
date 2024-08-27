@@ -2024,7 +2024,7 @@ input[type=color] {
   width: 50px;
   height: 50px;
   border-radius: 100%;
-  background: var(--tp-theme-1);
+  background: var(--main-color);
   -webkit-animation: preloader 1.3s linear infinite;
   animation: preloader 1.3s linear infinite;
 }
