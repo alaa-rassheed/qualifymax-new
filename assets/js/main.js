@@ -201,6 +201,35 @@
 			clickable: true,
 		},
 	});
+	const serviceswiper2 = new Swiper('.tp-project__slider-active2', {
+		// Optional parameters
+		loop: true,
+		slidesPerView: 2,
+		spaceBetween: 30,
+		breakpoints: {
+			'1200': {
+				slidesPerView: 2,
+			},
+			'992': {
+				slidesPerView: 1,
+			},
+			'768': {
+				slidesPerView: 1,
+			},
+			'576': {
+				slidesPerView: 1,
+			},
+			'0': {
+				slidesPerView: 1,
+			},
+		},
+
+		// scrollbar
+		scrollbar: {
+			el: ".tp-scrollbar",
+			clickable: true,
+		},
+	});
 
 	////////////////////////////////////////////////////
 
@@ -339,6 +368,14 @@
 	})
 
 	serviceswiper.on('transitionEnd', function (slider) {
+		slider.$el.removeClass('dragged')
+	})
+	// Product Related Slider Drag Events
+	serviceswiper2.on('sliderMove', function (slider, ev) {
+		slider.$el.addClass('dragged')
+	})
+
+	serviceswiper2.on('transitionEnd', function (slider) {
 		slider.$el.removeClass('dragged')
 	})
 
@@ -1110,17 +1147,17 @@
 		});
 	}
 
-	if ($('.sv-details-widget').length > 0) {
-		if (window.matchMedia('(min-width: 1200px)').matches) {
-			ScrollTrigger.create({
-				trigger: ".sv-details-widget",
-				start: "top 5%",
-				end: "bottom 70%",
-				pin: ".sv-details-widget",
-				pinSpacing: false
-			});
-		}
-	}
+	// if ($('.sv-details-widget').length > 0) {
+	// 	if (window.matchMedia('(min-width: 1200px)').matches) {
+	// 		ScrollTrigger.create({
+	// 			trigger: ".sv-details-widget",
+	// 			start: "top 5%",
+	// 			end: "bottom 40%",
+	// 			pin: ".sv-details-widget",
+	// 			pinSpacing: false
+	// 		});
+	// 	}
+	// }
 
 	// Home One Hero Animation 
 	let HomeDigital = gsap.timeline()
