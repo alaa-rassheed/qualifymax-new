@@ -1,0 +1,45 @@
+/*
+
+    [dir="rtl"]
+
+*/
+
+
+[dir="rtl"] body {
+    text-align: start;
+}
+
+[dir="rtl"] .about-shape-2,
+.breadcrumb__shape-2,
+.tp-hero-five-2-thumb-main {
+    right: unset;
+    left: 0;
+}
+
+[dir="rtl"] .tp-footer__contact-info ul li span {
+    left: unset;
+    right: 0;
+}
+
+[dir="rtl"] .contact-form-section-img {
+    right: unset;
+    left: 50px;
+}
+
+[dir="rtl"] .tp-hero-five-2-thumb {
+    transform: scaleX(-1);
+    -webkit-transform: scaleX(-1);
+    -moz-transform: scaleX(-1);
+    -ms-transform: scaleX(-1);
+    -o-transform: scaleX(-1);
+}
+
+[dir="rtl"] .postbox__comment-input .floating-label,
+[dir="rtl"] .postbox__comment-input .floating-label-2,
+[dir="rtl"] .postbox__comment-input input:focus~.floating-label,
+[dir="rtl"].postbox__comment-input input:not(:focus):valid~.floating-label,
+[dir="rtl"] .postbox__comment-input textarea:focus~.floating-label-2,
+[dir="rtl"] .postbox__comment-input textarea:not(:focus):valid~.floating-label-2 {
+    left: unset;
+    right: 20px;
+}
